@@ -1,0 +1,30 @@
+.movie__details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  &-item {
+    position: relative;
+    top: -10vh;
+    min-width: 30rem;
+    margin-bottom: 2rem;
+
+    font-size: 2rem;
+    text-align: center;
+    color: $color-grey-dark;
+
+    &:first-of-type {
+      font-size: 6rem;
+    }
+  }
+
+  .btn {
+    position: relative;
+    top: -10vh;
+    margin-top: 2rem;
+  }
+}

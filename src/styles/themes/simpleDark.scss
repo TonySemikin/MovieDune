@@ -1,0 +1,125 @@
+.SIMPLE_DARK {
+  font-family: datalegreya_dot;
+
+  &::before {
+    background-image: linear-gradient(
+    to right bottom,
+    rgba(0,0,0, .91),
+    rgba(0,0,0, .91)),
+    url('../assets/textures/3px-tile.png');
+  }
+
+  .menu {
+    &__icon {
+      border: 1px solid transparent;
+      box-shadow: 0px 2px 2rem rgba($color-white, .25);
+    }
+
+    .menu__content span:hover {
+      color: $color-grey-dark;
+    }
+  }
+
+  .search {
+    border-bottom: none;
+
+    input, span, button {
+      color: $color-white;
+    }
+
+    input {
+      font-family: datalegreya_dot;
+      border-bottom: 1px solid $color-silver-light;
+    }
+
+    input::placeholder {
+      color: rgba($color-white, .9);
+    }
+
+    &.scrolled {
+      background-color: rgba($color-black, .9);
+    }
+  }
+
+  .movies {
+    &__data {
+      background-image:
+      linear-gradient(
+        to right bottom,
+        rgba($color-white, .95) 0%,
+        rgba($color-white, .90) 20%,
+        rgba($color-white, .85) 80%,
+        rgba($color-white, .65) 100%),
+      linear-gradient(
+        to right top,
+        rgba($color-orange-medium, .15) 0%,
+        rgba($color-orange-medium, .15) 100%);
+      box-shadow: inset 0 0 3rem rgba($color-black, .45);
+
+      border: none;
+
+      &:hover {
+        background-image: linear-gradient(to right bottom, $color-white, $color-white);
+        box-shadow: inset 0 0 2rem rgba($color-black, .35);
+      }
+    }
+
+    &__actions {
+      background: none;
+      background-image: linear-gradient(to right bottom, $color-grey-dark, $color-black);
+      border: none;
+    }
+
+    &__btn {
+      background: none;
+      background-image: linear-gradient(to right bottom, $color-blue-light, $color-blue-deep);
+      border: none;
+      color: $color-white;
+    }
+
+    &__spinner {
+      color: $color-white;
+    }
+
+    &__error {
+      color: $color-silver-light;
+    }
+  }
+
+  .movie__details {
+    &-item {
+      color: $color-silver-light;
+    }
+  }
+
+  .pagination {
+    &__element {
+      background-image:
+      linear-gradient(
+        to right bottom,
+        rgba($color-white, .95) 0%,
+        rgba($color-white, .90) 20%,
+        rgba($color-white, .80) 70%,
+        rgba($color-white, .75) 100%),
+      linear-gradient(
+        to right top,
+        rgba($color-orange-medium, .15) 0%,
+        rgba($color-orange-medium, .15) 100%);
+      box-shadow: inset 0 0 3rem rgba($color-black, .45);
+
+      border: none;
+    }
+
+    &__page--covered {
+      background-image:  linear-gradient(
+        to right top,
+        rgba($color-black, .95) 0%,
+        rgba($color-black, .95) 100%);
+
+        color: $color-white;
+
+        box-shadow: inset 0 0 1rem rgba($color-white, .15);
+    }
+  }
+
+}

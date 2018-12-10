@@ -1,0 +1,5 @@
+export const FETCH_MOVIES = 'FETCH_MOVIES';
+export const SEARCH_MOVIES = 'SEARCH_MOVIES';
+export const NETWORK_ERROR = 'NETWORK_ERROR';
+export const CHANGE_THEME = 'CHANGE_THEME';
+export const RESET_ERROR = 'RESET_ERROR';

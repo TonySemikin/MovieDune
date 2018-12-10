@@ -1,0 +1,58 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  z-index: 1;
+
+  &__section {
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__element {
+    width: 4rem;
+    height: 4rem;
+    margin: .5rem;
+
+    border-radius: 3px;
+    border: 1px solid $color-grey-dark;
+
+    text-align: center;
+    line-height: 4rem;
+
+    cursor: pointer;
+
+    transition: all .3s;
+  }
+
+  &__load-more &__element {
+    width: 30rem;
+    max-width: 90vw;
+    height: 13rem;
+    margin-top: 2rem;
+
+    line-height: 13rem;
+    font-size: 4.5rem;
+
+    border-radius: .5rem;
+
+    .icon {
+      transition: all .5s;
+    }
+
+    &:hover .icon {
+      transform: scale(1.4) rotate(180deg);
+    }
+  }
+
+  &__pages {
+    margin-bottom: 4rem;
+  }
+
+  &__page--covered {
+    background-color: rgba($color-grey-dark, .8);
+  }
+}

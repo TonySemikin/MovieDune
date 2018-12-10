@@ -1,0 +1,22 @@
+@media (max-width: 450px) {
+  .search {
+    form span:first-of-type {
+      right: -12vw;
+    }
+  }
+
+  .movies li {
+    width: 90vw;
+    height: 11.5rem;
+    margin: .5rem;
+  }
+
+  .pagination {
+    &__load-more &__element {
+      width: 90vw;
+      height: 11.5rem;
+      line-height: 11.5rem;
+      margin-top: .5rem;
+    }
+  }
+}

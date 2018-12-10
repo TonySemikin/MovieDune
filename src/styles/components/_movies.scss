@@ -1,0 +1,144 @@
+.movies {
+  position: relative;
+  width: $grid-width;
+  max-width: 100vw;
+  min-height: 60vh;
+  margin: 0 auto;
+  margin-top: calc(4vh + 4rem);
+
+   &__spinner,
+   &__error {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+   }
+
+   &__error {
+     color: $color-grey-dark;
+     font-size: 2rem;
+     text-align: center;
+     min-width: 30rem;
+
+     button {
+       margin-top: 5rem;
+     }
+   }
+
+   &__list {
+     display: flex;
+     flex-flow: row;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     backface-visibility: hidden;
+
+     li {
+       position: relative;
+       list-style: none;
+       width: 30rem;
+       max-width: 90vw;
+       height: 13.5rem;
+
+       margin: 2rem;
+
+       cursor: pointer;
+
+       -webkit-perspective: 150rem;
+       -moz-perspective: 150rem;
+       perspective: 150rem;
+
+       transition: all .6s cubic-bezier(.01, 1.82, .45, .81);
+       backface-visibility: hidden;
+
+       transform: scale(1);
+       opacity: 1;
+
+       &.bubbled {
+         transform: scale(0.3);
+         opacity: 0;
+       }
+     }
+   }
+
+   &__data {
+     position: absolute;
+     top: 0;
+     left: 0;
+
+     width: 100%;
+     height: 100%;
+
+     &:hover  {
+       background-color: rgba($color-grey-dark, 1);
+     }
+
+     span {
+       display: inline-block;
+       width: 100%;
+       text-align: center;
+       position: absolute;
+       backface-visibility: hidden;
+
+       &:nth-child(1) {
+         top: 1.5rem;
+         font-size: 1.9rem;
+       }
+
+       &:nth-child(2) {
+         top: 49%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         font-size: 2.2rem;
+         backface-visibility: hidden;
+         text-shadow: 0 0 4px rgba($color-black, .5);
+       }
+
+       &:nth-child(3) {
+         bottom: 1.5rem;
+         font-size: 1.6rem;
+       }
+     }
+   }
+
+   &__actions {
+     position: absolute;
+     top: 0;
+     left: 0;
+
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-flow: column;
+
+     transform: rotateX(-180deg);
+
+     button {
+       display: none;
+     }
+   }
+
+   &__side {
+     transition: transform .7s cubic-bezier(.64, 1.78, .67, .92);
+     backface-visibility: hidden;
+
+     border: 1px solid $color-grey-dark;
+     border-radius: 0.5rem;
+   }
+}
+
+.selected {
+  .movies__data {
+    transform: rotateX(180deg);
+  }
+
+  .movies__actions {
+    transform: rotate(0deg);
+
+    button {
+      display: inline-block;
+    }
+  }
+}
